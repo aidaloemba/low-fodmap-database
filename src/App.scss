@@ -1,0 +1,71 @@
+@import "custom";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    text-align: center;
+    background-color: #F0EBDE;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    .top-pan {
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        flex: 0 1 auto;
+        align-self: auto;
+        justify-content: center;
+    }
+    .bottom-pan {
+        height: 50vh;
+        width: 100vw;
+        flex: 0 1 auto;
+        align-self: auto;
+        overflow: scroll;
+        background-color: #FFFFFF
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        .left-pan {
+            height: 100vh;
+            width: 50vw;
+            display: flex;
+            // flex: 0 1 50vw;
+            // align-self: auto;
+            // order: 0;
+            // align-items: center;
+            justify-content: center;
+        }
+        .right-pan {
+            height: 100vh;
+            width: 50vw;
+            align-self: auto;
+            order: 1;
+            align-content: center;
+            overflow: scroll;
+            background-color: #FFFFFF
+        }
+    }
+}

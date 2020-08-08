@@ -1,0 +1,50 @@
+.food {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+.name {
+    font-family: Serif;
+    font-size: 5em;
+    font-weight: 900;
+    hyphens: auto;
+}
+
+@media only screen and (min-width: 800px) {
+    .name {
+        font-size: 7em;
+    }
+}
+
+.fodmap,
+.details {
+    font-family: Sans-Serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    width: 25px;
+    height: 25px;
+    padding: 1px;
+    position: fixed;
+    left: 5px;
+    bottom: 51vh;
+    border-radius: 20px;
+    font-family: serif;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 800px) {
+    .info {
+        position: fixed;
+        left: 5px;
+        bottom: 5px;
+    }
+}
