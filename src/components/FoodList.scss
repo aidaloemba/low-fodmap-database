@@ -38,6 +38,7 @@ input {
     padding: 75px 0 25px 50px;
     line-height: 1.2em;
     list-style-type: none;
+    animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     li {
         font-family: Sans-Serif;
         text-transform: uppercase;
@@ -48,3 +49,15 @@ input {
         color: #000000;
     }
 }
+
+ @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
