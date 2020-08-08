@@ -20,6 +20,6 @@ function Info(props) {
         </Modal.Body>
       </Modal>
     );
-  }
+  };
 
 export default Info;

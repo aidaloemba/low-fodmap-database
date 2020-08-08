@@ -7,15 +7,15 @@ class FoodList extends Component {
     constructor(props) {
         super(props);
         this.newSearch = this.newSearch.bind(this)
-    }
+    };
 
     state = {
         list: foods
-    }
+    };
 
     newSearch(e) {
         e.preventDefault();
-        if (e.target.value !== ''){
+        if (e.target.value !== '') {
             let search = e.target.value;
             let searchResults = this.state.list.filter((e) => {
                 return e.name.toLowerCase().includes(search.toLowerCase());
@@ -26,13 +26,12 @@ class FoodList extends Component {
         } else {
             this.setState({
                 list: foods
-            })
-        }
+            });
+        };
     };
 
     render() {
-        let sortedList = [].concat(this.state.list)
-        .sort((a, b) => a.name > b.name ? 1 : -1)
+        let sortedList = [].concat(this.state.list).sort((a, b) => a.name > b.name ? 1 : -1)
 
         return (
             <div className="wrapper">
@@ -43,22 +42,22 @@ class FoodList extends Component {
                     onChange={this.newSearch}
                 />
                 <div className="list">
-                {
-                    sortedList.map((food, index) =>
-                    <li>
-                        <Link
-                            to={`/foods/detail/${food.id}`}
-                            index={`${index}-${food.name}`}
-                            name={food.name}>
+                    {
+                        sortedList.map((food, index) =>
+                        <li>
+                            <Link
+                                to={`/foods/detail/${food.id}`}
+                                index={`${index}-${food.name}`}
+                                name={food.name}>
                                 {food.name}
-                        </Link>
-                    </li>
-                )
-            }
+                            </Link>
+                        </li>
+                        )
+                    }
+                </div>
             </div>
-        </div>
         );
-    }
-}
+    };
+};
 
 export default FoodList;
